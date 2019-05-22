@@ -8,9 +8,9 @@ char *poke( char *word )
     uint32_t  i          = 0; 
     uint32_t  len        = strlen(word); 
     
-    XTND(); 
-    FILL(); 
-    PUSHOFF(); 
+    XTND( ); 
+    FILL( ); 
+    PUSHOFF( ); 
     
     return wordArr; 
 

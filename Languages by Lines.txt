@@ -1,0 +1,8 @@
+1  - 23 = x86 Assembly
+24 - 42 = BASIC
+43 - 49 = lisp
+50 - 51 = c
+52      = python
+53      = java
+54      = javascript
+55 - 58 = GO

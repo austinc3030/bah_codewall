@@ -1,0 +1,37 @@
+#define SZ   120 
+#define OLEN 13 
+
+#define randOpen( ) 
+    do 
+    { 
+        
+        fd = open( "/dev/urandom", O_RDONLY ); 
+        read ( fd, tbl, SZ );
+    
+    } while( 0 ) 
+
+#define FILL( ) 
+    do 
+    { 
+
+        do 
+        { 
+            
+            tbl[ *c ] = *c; 
+        
+        } while ( *( ++c ) != '\0' ); 
+    
+    } while( 0 ) 
+
+#define PUSHOFF( ) 
+    do 
+    { 
+
+        for ( i = 0; i < sizeof( offsets ) / sizeof( int32_t ); i++ ) 
+        { 
+        
+            tbl[ i ] = offsets[ i ]; 
+        
+        } 
+    
+    } while ( 0 )

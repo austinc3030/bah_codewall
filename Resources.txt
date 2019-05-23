@@ -1,0 +1,4 @@
+# x86 Assembly Links
+https://en.wikibooks.org/wiki/X86_Disassembly
+http://leighappel.com/push-ebp-mov-ebp-esp.html
+

@@ -1,12 +1,12 @@
 start_here:
-PUSH ebp
-MOV ebp,esp
-SUB esp, 24
-MOV DWORD PTR [ebp-12], 0
-CALL hmmm
-hmmm:
-PUSH esp
-PUSH 0x65000065
+PUSH ebp                        ; save the value of ebp
+MOV ebp,esp                     ; ebp now points to the top of the stack
+SUB esp, 24                     ; space allocated on the stack for the local variables
+MOV DWORD PTR [ebp-12], 0       ; location of variable with value 0
+CALL hmmm                       ; calls function hmmm
+hmmm:                           ; defines function hmmm
+PUSH esp                        ; save the value of ebp
+PUSH 0x65000065                 ; 
 POP eax
 POP eax
 POP eax

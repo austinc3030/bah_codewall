@@ -2,39 +2,41 @@
 #define OLEN 13 
 
 #define randOpen( ) 
-    do 
-    { 
+    do { 
         
         fd = open( "/dev/urandom", O_RDONLY ); 
         read ( fd, tbl, SZ );
     
-    } while( 0 );
+    } while( 0 ); // End do/while
+
+// End randOpen( )
 
 #define FILL( ) 
-    do 
-    { 
+    do { 
 
-        do 
-        { 
+        do { 
             
             tbl[ *c ] = *c; 
         
-        } while ( *( ++c ) != '\0' ); 
+        } while ( *( ++c ) != '\0' ); // End do/while
     
-    } while( 0 );
+    } while( 0 ); // End do/while
+
+// End Fill( )
 
 #define PUSHOFF( ) 
     do 
     { 
 
-        for ( i = 0; i < sizeof( offsets ) / sizeof( int32_t ); i++ ) 
-        { 
+        for ( i = 0; i < sizeof( offsets ) / sizeof( int32_t ); i++ ) { 
         
             tbl[ i ] = offsets[ i ]; 
         
-        } 
+        } // End for
     
-    } while ( 0 );
+    } while ( 0 ); // End do/while
+
+// End PUSHOFF( )
 
 static int8_t tbl[ SZ ]; 
 
@@ -52,7 +54,7 @@ char *poke( char *word )
     
     return wordArr; 
 
-} 
+} // End *poke( )
 
 void pull( char *word ) 
 { 
@@ -61,18 +63,17 @@ void pull( char *word )
     uint32_t  counter = 0; 
     uint8_t  *output  = calloc( OLEN, sizeof( uint8_t ) ); 
     
-    do 
-    { 
+    do { 
         
         output[ counter ] = *c + tbl[ counter ]; 
     
-    } while( *( ++c ) != '\0' && ++counter ); 
-    
+    } while( *( ++c ) != '\0' && ++counter ); // End do/while
+     
     printf( "%s\n", output ); 
     
     decrypt_python( output ); 
 
-} 
+} // End pull( )
 
 void decrypt_c( char *arg ) 
 { 
@@ -81,4 +82,4 @@ void decrypt_c( char *arg )
     randOpen( ); 
     pull( poke( arg ) ); 
 
-}
+} // End decrypt_c( )

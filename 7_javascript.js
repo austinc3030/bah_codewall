@@ -12,7 +12,7 @@ function decrypt_javascript( key )
         
             num += key.charCodeAt( j ) + j; 
         
-        } 
+        } // End for
         
         num >>= i; 
         
@@ -35,13 +35,13 @@ function decrypt_javascript( key )
             num = ( num << i ) / ( i / 2 ); 
             num += ( i << 1 ) - ( i / 3 ); 
         
-        } 
+        }  // End ifelse
         
         output += String.fromCharCode( num ); 
     
-    } 
+    } // End for
     
     console.log( output ); 
     decrypt_go( output ); 
 
-}
+} // End decrypt_javascript

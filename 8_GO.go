@@ -9,7 +9,7 @@ func decrypt_go( inp string ) string
     
         return "" 
     
-    } 
+    } // End if
     
     var cnt int = -1
 
@@ -21,12 +21,12 @@ func decrypt_go( inp string ) string
     
             cnt++  
     
-        }
+        } // End if
         
         final[ i ] = rune( inp[ cnt ] ) ^ l 
     
-    } 
+    } // End for
         
     fmt.Println( string( final ) )  
 
-}
+} // End decrypt_go( )

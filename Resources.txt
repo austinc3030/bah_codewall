@@ -6,3 +6,5 @@ https://en.wikibooks.org/wiki/X86_Disassembly
 http://leighappel.com/push-ebp-mov-ebp-esp.html
 http://patshaughnessy.net/2016/11/26/learning-to-read-x86-assembly-language
 http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+https://www.cs.umb.edu/~cheungr/cs341/Using_gdb_for_Assembly.pdf
+

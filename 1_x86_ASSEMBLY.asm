@@ -1,6 +1,6 @@
 start_here:       
 PUSH ebp                             ; ebp        > esp        ; Push the base pointer onto the stack to preserve its value
-MOV ebp,esp                          ; ebp        = esp        ; Copy the base pointer value to the stack
+MOV ebp,esp                          ; esp        = ebp        ; Copy the base pointer value to the stack
 SUB esp, 24                          ; esp        = esp - 24   ; Subtract 24 from the value stored on the stack
 MOV DWORD PTR [ebp-12], 0            ; 0          > [ebp-12]   ; Copy a value of 0 to ( base pointer - 12 )
 CALL hmmm                            ;                         ; Call the function hmmm
@@ -21,4 +21,3 @@ hmmm:                                ;                         ; Function defini
     NOP                              ;                         ; No Operation
     LEAVE                            ;                         ; Leave function hmmm???
     RET                              ;                         ; Return from function hmmm???
-

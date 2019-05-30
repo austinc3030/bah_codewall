@@ -16,6 +16,7 @@ hmmm:
     CALL puts
     ADD esp, 4
     PUSH DWORD [ebp-12]
+    CALL puts
     ADD esp, 16
     NOP
     LEAVE

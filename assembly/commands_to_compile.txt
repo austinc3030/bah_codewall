@@ -1,0 +1,3 @@
+nano 1_x86_ASSEMBLY.asm
+nasm -f elf32 1_x86_ASSEMBLY.asm
+gcc -m32 1_x86_ASSEMBLY.o
